@@ -97,8 +97,8 @@ Implementación del portafolio web premium de Luis Porto usando Next.js 15 App R
 - [~] 5. Checkpoint - Verificar estructura base
   - Asegurar que todas las dependencias estén instaladas, el build compile sin errores, y los componentes base estén correctamente tipados. Preguntar al usuario si surgen dudas.
 
-- [ ] 6. Secciones del portafolio - Parte 1 (Navegación y Hero)
-  - [~] 6.1 Implementar componente Navbar
+- [x] 6. Secciones del portafolio - Parte 1 (Navegación y Hero)
+  - [x] 6.1 Implementar componente Navbar
     - Crear `components/sections/Navbar.tsx` como Client Component
     - Posición sticky en top con z-index alto
     - Logo "LP" como enlace a inicio, enlaces de navegación en orden definido
@@ -109,7 +109,7 @@ Implementación del portafolio web premium de Luis Porto usando Next.js 15 App R
     - Cerrar menú móvil al seleccionar un enlace
     - _Requisitos: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9_
 
-  - [~] 6.2 Implementar componente Hero
+  - [x] 6.2 Implementar componente Hero
     - Crear `components/sections/Hero.tsx` como Client Component
     - Layout de 2 columnas en desktop (≥1024px), 1 columna en móvil
     - Columna izquierda: nombre "Luis Porto", título, descripción, botones "Ver Proyectos" y "Contactar", badges de tecnologías
@@ -170,7 +170,7 @@ Implementación del portafolio web premium de Luis Porto usando Next.js 15 App R
     - Botón "Enviar correo" con enlace mailto:
     - _Requisitos: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6_
 
-  - [~] 8.2 Implementar componente Footer
+  - [x] 8.2 Implementar componente Footer
     - Crear `components/sections/Footer.tsx` como Server Component
     - Texto "Luis Porto © 2026"
     - Enlaces a GitHub, LinkedIn, WhatsApp con target="_blank", rel="noopener noreferrer"
