@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -7,19 +6,6 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
-=======
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
->>>>>>> 3ea34d3f62a43b5d1a00367a579c9021d3de2538
 });
 
 export const metadata: Metadata = {
@@ -33,18 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<<<<<<< HEAD
     <html lang="es" className={`${inter.variable} antialiased`}>
       <body className="bg-background text-foreground min-h-screen">
         {children}
       </body>
-=======
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
->>>>>>> 3ea34d3f62a43b5d1a00367a579c9021d3de2538
     </html>
   );
 }
