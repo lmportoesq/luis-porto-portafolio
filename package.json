@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+<<<<<<< HEAD
     "lint": "eslint",
     "test": "vitest --run",
     "test:watch": "vitest",
@@ -25,15 +26,31 @@
     "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
+=======
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "16.2.9",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+>>>>>>> 3ea34d3f62a43b5d1a00367a579c9021d3de2538
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
+<<<<<<< HEAD
     "fast-check": "^4.8.0",
     "jsdom": "^29.1.1",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.8"
+=======
+    "tailwindcss": "^4",
+    "typescript": "^5"
+>>>>>>> 3ea34d3f62a43b5d1a00367a579c9021d3de2538
   }
 }
