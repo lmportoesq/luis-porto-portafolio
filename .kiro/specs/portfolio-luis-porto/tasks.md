@@ -204,8 +204,8 @@ Implementación del portafolio web premium de Luis Porto usando Next.js 15 App R
 - [x] 11. Checkpoint - Build completo y verificación
   - Ejecutar `npm run build` para verificar que la aplicación compila sin errores. Ejecutar `npm run lint` para verificar el código. Preguntar al usuario si surgen dudas.
 
-- [ ] 12. Testing y validación
-  - [~] 12.1 Configurar Vitest y Testing Library
+- [x] 12. Testing y validación
+  - [x] 12.1 Configurar Vitest y Testing Library
     - Crear `vitest.config.ts` con configuración para React (jsdom environment)
     - Crear archivo de setup para testing-library/jest-dom
     - Agregar script "test" en package.json
@@ -252,7 +252,7 @@ Implementación del portafolio web premium de Luis Porto usando Next.js 15 App R
     - Verificar que aria-label esté presente con al menos 3 caracteres descriptivos
     - **Valida: Requisitos 15.5**
 
-- [~] 13. Checkpoint final - Verificación completa
+- [x] 13. Checkpoint final - Verificación completa
   - Ejecutar todos los tests con `npx vitest --run`. Ejecutar `npm run build` para confirmar build de producción exitoso. Preguntar al usuario si surgen dudas.
 
 ## Notes
