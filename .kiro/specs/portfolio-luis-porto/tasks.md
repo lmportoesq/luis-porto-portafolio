@@ -94,7 +94,7 @@ Implementación del portafolio web premium de Luis Porto usando Next.js 15 App R
     - Tipografía grande y bold con color foreground
     - _Requisitos: 3.4, 4.1, 6.5_
 
-- [~] 5. Checkpoint - Verificar estructura base
+- [x] 5. Checkpoint - Verificar estructura base
   - Asegurar que todas las dependencias estén instaladas, el build compile sin errores, y los componentes base estén correctamente tipados. Preguntar al usuario si surgen dudas.
 
 - [x] 6. Secciones del portafolio - Parte 1 (Navegación y Hero)
@@ -178,30 +178,30 @@ Implementación del portafolio web premium de Luis Porto usando Next.js 15 App R
     - aria-label en cada enlace social
     - _Requisitos: 9.1, 9.2, 9.3, 9.4_
 
-- [~] 9. Checkpoint - Verificar secciones individuales
+- [x] 9. Checkpoint - Verificar secciones individuales
   - Asegurar que todos los componentes de sección compilen correctamente, que los tipos estén correctos y no haya errores de TypeScript. Preguntar al usuario si surgen dudas.
 
-- [ ] 10. Composición de página y SEO
-  - [~] 10.1 Componer la página principal
+- [x] 10. Composición de página y SEO
+  - [x] 10.1 Componer la página principal
     - Actualizar `app/page.tsx` como Server Component que importe y renderice todas las secciones en orden: Navbar, Hero, AboutMe, Services, Projects, Technologies, Experience, CTAFinal, Footer
     - Envolver secciones en estructura semántica: header (Navbar), main (contenido), footer
     - Usar ids en cada sección para navegación por anclas (#inicio, #proyectos, #servicios, #tecnologias, #contacto)
     - _Requisitos: 14.4, 15.4_
 
-  - [~] 10.2 Configurar metadata y SEO en el layout
+  - [x] 10.2 Configurar metadata y SEO en el layout
     - Actualizar `app/layout.tsx` con metadata completa usando la Metadata API de Next.js
     - Incluir: title, description, keywords, Open Graph (og:title, og:description, og:image con URL absoluta, og:type "website", og:url), Twitter Card (summary_large_image)
     - Importar datos desde `data/site.ts`
     - Verificar que `lang="es"` esté configurado en `<html>`
     - _Requisitos: 13.1, 13.2, 13.3, 13.4, 13.5, 13.6_
 
-  - [~] 10.3 Configurar imágenes y assets
+  - [x] 10.3 Configurar imágenes y assets
     - Agregar placeholder para `public/images/luis-porto.webp` y `public/images/og-image.png`
     - Usar componente `next/image` con formato WebP, lazy loading para imágenes fuera del viewport inicial
     - Configurar onError fallback para imágenes que no cargan
     - _Requisitos: 14.2, 14.5, 2.8_
 
-- [~] 11. Checkpoint - Build completo y verificación
+- [x] 11. Checkpoint - Build completo y verificación
   - Ejecutar `npm run build` para verificar que la aplicación compila sin errores. Ejecutar `npm run lint` para verificar el código. Preguntar al usuario si surgen dudas.
 
 - [ ] 12. Testing y validación

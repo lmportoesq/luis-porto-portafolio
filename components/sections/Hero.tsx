@@ -1,12 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { MapPin } from "lucide-react";
+import { MapPin, User } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { FloatingImage } from "@/components/animations/FloatingImage";
 
 export function Hero() {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <section
       id="inicio"
@@ -20,14 +23,25 @@ export function Hero() {
               <FloatingImage amplitude={10} duration={3}>
                 <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px]">
                   <div className="absolute inset-0 rounded-full shadow-[0_0_40px_rgba(79,70,229,0.3)] border-2 border-primary/30" />
-                  <Image
-                    src="/images/luis-porto.webp"
-                    alt="Fotografía profesional de Luis Porto"
-                    width={400}
-                    height={400}
-                    className="rounded-full object-cover w-full h-full relative z-10"
-                    priority
-                  />
+                  {imageError ? (
+                    <div
+                      className="rounded-full w-full h-full relative z-10 bg-card flex items-center justify-center border border-border"
+                      role="img"
+                      aria-label="Fotografía profesional de Luis Porto"
+                    >
+                      <User className="w-24 h-24 text-primary/60" />
+                    </div>
+                  ) : (
+                    <Image
+                      src="/images/luis-porto.webp"
+                      alt="Fotografía profesional de Luis Porto"
+                      width={400}
+                      height={400}
+                      className="rounded-full object-cover w-full h-full relative z-10"
+                      priority
+                      onError={() => setImageError(true)}
+                    />
+                  )}
                 </div>
               </FloatingImage>
 
