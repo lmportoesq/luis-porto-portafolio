@@ -33,7 +33,7 @@ export function Hero() {
                     </div>
                   ) : (
                     <Image
-                      src="/images/luis-porto.webp"
+                      src="/images/luis-porto.jpg"
                       alt="Fotografía profesional de Luis Porto"
                       width={400}
                       height={400}
