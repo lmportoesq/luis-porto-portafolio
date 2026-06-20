@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { MapPin, User } from "lucide-react";
+import { MapPin, User, MessageCircle } from "lucide-react";
+import { siteConfig } from "@/data/site";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { FloatingImage } from "@/components/animations/FloatingImage";
@@ -75,8 +76,9 @@ export function Hero() {
               <Button variant="primary" size="md" href="#proyectos">
                 Ver Proyectos
               </Button>
-              <Button variant="ghost" size="md" href="#contacto">
-                Contactar
+              <Button variant="ghost" size="md" href={siteConfig.whatsappUrl} external>
+                <MessageCircle className="mr-2 h-4 w-4" />
+                Contáctame
               </Button>
             </div>
 
