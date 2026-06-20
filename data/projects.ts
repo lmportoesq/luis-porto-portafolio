@@ -12,6 +12,7 @@ export const projects: Project[] = [
       "Control de citas",
     ],
     technologies: ["Next.js", "PostgreSQL", "Supabase"],
+    demoUrl: "https://miconsultorio.demo.com",
   },
   {
     id: "rinas-gallos",
@@ -24,6 +25,7 @@ export const projects: Project[] = [
       "Reportes",
     ],
     technologies: ["Next.js", "PostgreSQL"],
+    demoVideo: "/PortoVal_Demo.mp4",
   },
   {
     id: "porto-soluciones",

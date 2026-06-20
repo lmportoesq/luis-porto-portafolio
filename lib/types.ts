@@ -4,6 +4,8 @@ export interface Project {
   description: string;
   features: string[];
   technologies: string[];
+  demoUrl?: string;
+  demoVideo?: string;
 }
 
 export interface Service {

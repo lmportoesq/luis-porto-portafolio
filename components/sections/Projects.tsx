@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -8,8 +9,11 @@ import {
   StaggerContainer,
   staggerItemVariants,
 } from "@/components/animations/StaggerContainer";
+import { ExternalLink, X, Play } from "lucide-react";
 
 export function Projects() {
+  const [videoSrc, setVideoSrc] = useState<string | null>(null);
+
   return (
     <section id="proyectos" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-7xl">
@@ -17,7 +21,7 @@ export function Projects() {
 
         <StaggerContainer
           staggerDelay={0.15}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {projects.map((project) => (
             <motion.div
@@ -45,15 +49,66 @@ export function Projects() {
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {project.technologies.map((tech) => (
-                  <Badge key={tech}>{tech}</Badge>
-                ))}
+              <div className="flex items-center gap-2 mt-auto">
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <Badge key={tech}>{tech}</Badge>
+                  ))}
+                </div>
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-500/80 text-white text-sm font-medium hover:bg-red-500 transition-colors flex-shrink-0"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    Ver demo
+                  </a>
+                )}
+                {project.demoVideo && (
+                  <button
+                    onClick={() => setVideoSrc(project.demoVideo!)}
+                    className="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-500/80 text-white text-sm font-medium hover:bg-red-500 transition-colors flex-shrink-0"
+                  >
+                    <Play className="w-3.5 h-3.5" />
+                    Ver demo
+                  </button>
+                )}
               </div>
             </motion.div>
           ))}
         </StaggerContainer>
       </div>
+
+      {/* Video Modal */}
+      {videoSrc && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setVideoSrc(null)}
+        >
+          <div
+            className="relative w-full max-w-4xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setVideoSrc(null)}
+              className="absolute -top-10 right-0 text-white hover:text-muted transition-colors"
+              aria-label="Cerrar video"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <video
+              src={videoSrc}
+              autoPlay
+              controls
+              className="w-full rounded-xl shadow-2xl"
+            >
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
